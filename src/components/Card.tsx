@@ -45,7 +45,7 @@ const Card = ({
                   alt="star"
                   width={24}
                   height={24}
-                  src={"/star_fill.svg"}
+                  src={"/Star_fill.svg"}
                 />
                 <p>
                   {rating}
@@ -54,7 +54,7 @@ const Card = ({
               </>
             ) : (
               <>
-                <Image alt="star" width={24} height={24} src={"/star.svg"} />
+                <Image alt="star" width={24} height={24} src={"/Star.svg"} />
                 <p>
                   <span className="text-sm mx-1 text-custom-light-gray">
                     No ratings
