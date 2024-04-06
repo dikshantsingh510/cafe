@@ -2,13 +2,25 @@
 
 import Image from "next/image";
 import Card from "@/components/Card";
-import Menu from "@/components/Menu";
+
 import { useState, useEffect } from "react";
-import { log } from "console";
+
 
 // import data from "@/utils/data";
 
 export default function Home() {
+
+type Item = {
+  id: number;
+  name: string;
+  image: string;
+  price: string;
+  rating: number | null;
+  votes: number;
+  popular: boolean;
+  available: boolean;
+};
+
   const [data, setData] = useState<any>("");
   const [availableNow, setAvailableNow] = useState(false);
   async function getData() {
@@ -118,30 +130,7 @@ export default function Home() {
                   }
                 }
               )}
-            {/* {data.map(
-              ({
-                id,
-                name,
-                image,
-                price,
-                rating,
-                votes,
-                popular,
-                available,
-              }: Item) => (
-                <Card
-                  key={id}
-                  id={id}
-                  name={name}
-                  image={image}
-                  price={price}
-                  rating={rating}
-                  votes={votes}
-                  popular={popular}
-                  available={available}
-                />
-              )
-            )} */}
+          
           </div>
         </main>
       </section>

@@ -1,4 +1,14 @@
 import Image from "next/image";
+type Item = {
+  id: number;
+  name: string;
+  image: string;
+  price: string;
+  rating: number | null;
+  votes: number;
+  popular: boolean;
+  available: boolean;
+};
 
 const Card = ({
   name,
